@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crotty - سياسة الخصوصية | Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7966FF;
+            --primary-light: #9a8bff;
+            --primary-dark: #5a4ad6;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --background: #ffffff;
+            --background-alt: #f8f9fa;
+            --border: #e0e0e0;
+            --shadow: rgba(121, 102, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--background);
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        body.ltr {
+            font-family: 'Poppins', sans-serif;
+            direction: ltr;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--background);
+            box-shadow: 0 2px 10px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo-placeholder {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        #languageToggle {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        #languageToggle:hover {
+            background-color: var(--primary-light);
+            color: white;
+        }
+
+        #backToApp {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .update-date {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background-color: var(--background-alt);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            padding-right: 20px;
+        }
+
+        body.ltr ul {
+            padding-right: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Print styles */
+        @media print {
+            header, footer, #backToApp {
+                display: none;
+            }
+
+            body, section {
+                background-color: white;
+                box-shadow: none;
+            }
+
+            section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+                padding: 0;
+            }
+
+            h1, h2 {
+                color: black;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .header-actions {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+
+                    <div class="logo-placeholder">
+<img src="https://firebasestorage.googleapis.com/v0/b/meamarmanager.appspot.com/o/network_client_app_logo%2FKroti-logo-121.png?alt=media&token=89a661ef-6144-44d3-9a34-667051694fcb"
+ alt="Logo" width="35" height="35">
+
+                    </div>
+                    
+                    <span>Crotty</span>
+                </div>
+                <div class="header-actions">
+                    <button id="backToApp" onclick="window.location.href='#'">
+                        <span class="ar-text">العودة إلى التطبيق</span>
+                        <span class="en-text hidden">Back to App</span>
+                    </button>
+                    <button id="languageToggle">English</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h1>
+            <span class="ar-text">سياسة الخصوصية</span>
+            <span class="en-text hidden">Privacy Policy</span>
+        </h1>
+        <p class="update-date">
+            <span class="ar-text">آخر تحديث: 13 مايو 2025</span>
+            <span class="en-text hidden">Last Updated: May 13, 2025</span>
+        </p>
+        
+        <section id="introduction">
+            <h2>
+                <span class="ar-text">مقدمة</span>
+                <span class="en-text hidden">Introduction</span>
+            </h2>
+            <p class="ar-text">
+                مرحبًا بك في تطبيق Crotty. نحن نقدر ثقتك ونلتزم بحماية خصوصيتك. توضح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وحماية معلوماتك الشخصية عند استخدام تطبيقنا. يرجى قراءة هذه السياسة بعناية لفهم ممارساتنا المتعلقة بمعلوماتك الشخصية.
+            </p>
+            <p class="en-text hidden">
+                Welcome to the Crotty app. We value your trust and are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our application. Please read this policy carefully to understand our practices regarding your personal information.
+            </p>
+        </section>
+        
+        <section id="information-collection">
+            <h2>
+                <span class="ar-text">جمع المعلومات</span>
+                <span class="en-text hidden">Information Collection</span>
+            </h2>
+            <p class="ar-text">
+                نحن نجمع أنواعًا مختلفة من المعلومات لتوفير وتحسين خدماتنا لك:
+            </p>
+            <p class="en-text hidden">
+                We collect various types of information to provide and improve our services to you:
+            </p>
+            <ul class="ar-text">
+                <li>المعلومات الشخصية: الاسم وعنوان البريد الإلكتروني ورقم الهاتف والعنوان (عند الاقتضاء).</li>
+                <li>معلومات الجهاز: نوع الجهاز ونظام التشغيل والإصدار ومعرف الجهاز الفريد.</li>
+                <li>بيانات الاستخدام: كيفية تفاعلك مع التطبيق، والميزات التي تستخدمها، ووقت وتاريخ نشاطك.</li>
+                <li>بيانات الموقع: موقعك الجغرافي (إذا منحت الإذن).</li>
+                <li>المعلومات التي تقدمها: المحتوى الذي تنشئه أو تشاركه من خلال التطبيق.</li>
+            </ul>
+            <ul class="en-text hidden">
+                <li>Personal Information: Name, email address, phone number, and address (where applicable).</li>
+                <li>Device Information: Device type, operating system and version, and unique device identifier.</li>
+                <li>Usage Data: How you interact with the app, features you use, and the time and date of your activity.</li>
+                <li>Location Data: Your geographic location (if permission is granted).</li>
+                <li>Information You Provide: Content you create or share through the app.</li>
+            </ul>
+        </section>
+        
+        <section id="information-use">
+            <h2>
+                <span class="ar-text">كيف نستخدم المعلومات</span>
+                <span class="en-text hidden">How We Use Information</span>
+            </h2>
+            <p class="ar-text">
+                نستخدم المعلومات التي نجمعها للأغراض التالية:
+            </p>
+            <p class="en-text hidden">
+                We use the information we collect for the following purposes:
+            </p>
+            <ul class="ar-text">
+                <li>توفير وصيانة وتحسين خدماتنا.</li>
+                <li>إنشاء وإدارة حسابك.</li>
+                <li>إرسال إشعارات وتحديثات مهمة حول التطبيق.</li>
+                <li>تخصيص تجربتك وتقديم محتوى وميزات قد تهمك.</li>
+                <li>تحليل كيفية استخدام المستخدمين للتطبيق لتحسين خدماتنا.</li>
+                <li>اكتشاف ومنع الاحتيال والأنشطة غير المصرح بها.</li>
+            </ul>
+            <ul class="en-text hidden">
+                <li>To provide, maintain, and improve our services.</li>
+                <li>To create and manage your account.</li>
+                <li>To send important notifications and updates about the app.</li>
+                <li>To personalize your experience and deliver content and features that may interest you.</li>
+                <li>To analyze how users use the app to improve our services.</li>
+                <li>To detect and prevent fraud and unauthorized activities.</li>
+            </ul>
+        </section>
+        
+        <section id="data-sharing">
+            <h2>
+                <span class="ar-text">مشاركة البيانات</span>
+                <span class="en-text hidden">Data Sharing</span>
+            </h2>
+            <p class="ar-text">
+                نحن لا نبيع معلوماتك الشخصية لأطراف ثالثة. ومع ذلك، قد نشارك معلوماتك في الحالات التالية:
+            </p>
+            <p class="en-text hidden">
+                We do not sell your personal information to third parties. However, we may share your information in the following circumstances:
+            </p>
+            <ul class="ar-text">
+                <li>مع مقدمي الخدمات الذين يساعدوننا في تشغيل التطبيق وتقديم الخدمات.</li>
+                <li>عندما يكون ذلك مطلوبًا بموجب القانون أو استجابة لعملية قانونية.</li>
+                <li>لحماية حقوقنا أو ممتلكاتنا أو سلامة مستخدمينا أو الجمهور.</li>
+                <li>في حالة الاندماج أو الاستحواذ أو بيع الأصول، حيث قد يتم نقل المعلومات كجزء من أصول الأعمال.</li>
+                <li>مع موافقتك الصريحة لمشاركة المعلومات.</li>
+            </ul>
+            <ul class="en-text hidden">
+                <li>With service providers who help us operate the app and deliver services.</li>
+                <li>When required by law or in response to legal process.</li>
+                <li>To protect our rights, property, or the safety of our users or the public.</li>
+                <li>In the event of a merger, acquisition, or sale of assets, where information may be transferred as a business asset.</li>
+                <li>With your explicit consent to share the information.</li>
+            </ul>
+        </section>
+        
+        <section id="security">
+            <h2>
+                <span class="ar-text">الأمان</span>
+                <span class="en-text hidden">Security</span>
+            </h2>
+            <p class="ar-text">
+                نحن نتخذ تدابير أمنية معقولة لحماية معلوماتك الشخصية من الوصول غير المصرح به والكشف والاستخدام والتعديل. تشمل هذه التدابير:
+            </p>
+            <p class="en-text hidden">
+                We take reasonable security measures to protect your personal information from unauthorized access, disclosure, use, and modification. These measures include:
+            </p>
+            <ul class="ar-text">
+                <li>تشفير البيانات أثناء النقل والتخزين.</li>
+                <li>تقييد الوصول إلى المعلومات الشخصية للموظفين المصرح لهم فقط.</li>
+                <li>تنفيذ ضوابط أمنية مادية وإلكترونية وإدارية.</li>
+                <li>مراجعة ممارساتنا الأمنية بانتظام وتحديثها لتعزيز الحماية.</li>
+            </ul>
+            <ul class="en-text hidden">
+                <li>Encrypting data during transmission and storage.</li>
+                <li>Restricting access to personal information to authorized employees only.</li>
+                <li>Implementing physical, electronic, and administrative security controls.</li>
+                <li>Regularly reviewing and updating our security practices to enhance protection.</li>
+            </ul>
+        </section>
+        
+        <section id="user-rights">
+            <h2>
+                <span class="ar-text">حقوق المستخدم</span>
+                <span class="en-text hidden">User Rights</span>
+            </h2>
+            <p class="ar-text">
+                تمتلك حقوقًا معينة فيما يتعلق بمعلوماتك الشخصية، بما في ذلك:
+            </p>
+            <p class="en-text hidden">
+                You have certain rights regarding your personal information, including:
+            </p>
+            <ul class="ar-text">
+                <li>الوصول: يمكنك طلب نسخة من معلوماتك الشخصية التي نحتفظ بها.</li>
+                <li>التصحيح: يمكنك طلب تصحيح المعلومات غير الدقيقة أو غير المكتملة.</li>
+                <li>الحذف: يمكنك طلب حذف معلوماتك الشخصية في ظروف معينة.</li>
+                <li>تقييد المعالجة: يمكنك طلب تقييد معالجة معلوماتك في ظروف معينة.</li>
+                <li>نقل البيانات: يمكنك طلب نقل معلوماتك إلى خدمة أخرى.</li>
+                <li>الاعتراض: يمكنك الاعتراض على معالجة معلوماتك لأغراض معينة.</li>
+            </ul>
+            <ul class="en-text hidden">
+                <li>Access: You can request a copy of your personal information that we hold.</li>
+                <li>Correction: You can request correction of inaccurate or incomplete information.</li>
+                <li>Deletion: You can request deletion of your personal information in certain circumstances.</li>
+                <li>Restriction of processing: You can request restriction of processing of your information in certain circumstances.</li>
+                <li>Data portability: You can request transfer of your information to another service.</li>
+                <li>Objection: You can object to processing of your information for certain purposes.</li>
+            </ul>
+        </section>
+        
+        <section id="policy-changes">
+            <h2>
+                <span class="ar-text">التغييرات في السياسة</span>
+                <span class="en-text hidden">Changes to Policy</span>
+            </h2>
+            <p class="ar-text">
+                قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر لتعكس التغييرات في ممارساتنا أو لأسباب تشغيلية أو قانونية أو تنظيمية أخرى. سنقوم بإخطارك بأي تغييرات جوهرية من خلال إشعار بارز على التطبيق أو عن طريق إرسال بريد إلكتروني إلى العنوان المرتبط بحسابك. نشجعك على مراجعة سياسة الخصوصية بشكل دوري للبقاء على اطلاع بكيفية حماية معلوماتك.
+            </p>
+            <p class="en-text hidden">
+                We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes through a prominent notice on the app or by sending an email to the address associated with your account. We encourage you to review the Privacy Policy periodically to stay informed about how we are protecting your information.
+            </p>
+        </section>
+        
+        <section id="contact">
+            <h2>
+                <span class="ar-text">معلومات الاتصال</span>
+                <span class="en-text hidden">Contact Information</span>
+            </h2>
+            <p class="ar-text">
+                إذا كان لديك أي أسئلة أو مخاوف بشأن سياسة الخصوصية هذه أو ممارسات الخصوصية لدينا، يرجى الاتصال بنا على:
+            </p>
+            <p class="en-text hidden">
+                If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at:
+            </p>
+            <p class="ar-text">
+                البريد الإلكتروني: privacy@crottyapp.com<br>
+                العنوان: شارع الملك فهد، الرياض، المملكة العربية السعودية<br>
+                الهاتف: +966 12 345 6789
+            </p>
+            <p class="en-text hidden">
+                Email: privacy@crottyapp.com<br>
+                Address: King Fahd Road, Riyadh, Saudi Arabia<br>
+                Phone: +966 12 345 6789
+            </p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="ar-text">© 2025 Crotty. جميع الحقوق محفوظة.</p>
+            <p class="en-text hidden">© 2025 Crotty. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Language switching functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const arTexts = document.querySelectorAll('.ar-text');
+        const enTexts = document.querySelectorAll('.en-text');
+        const htmlElement = document.documentElement;
+        const bodyElement = document.body;
+        
+        languageToggle.addEventListener('click', function() {
+            if (htmlElement.lang === 'ar') {
+                // Switch to English
+                htmlElement.lang = 'en';
+                htmlElement.dir = 'ltr';
+                bodyElement.classList.add('ltr');
+                languageToggle.textContent = 'العربية';
+                
+                arTexts.forEach(el => el.classList.add('hidden'));
+                enTexts.forEach(el => el.classList.remove('hidden'));
+            } else {
+                // Switch to Arabic
+                htmlElement.lang = 'ar';
+                htmlElement.dir = 'rtl';
+                bodyElement.classList.remove('ltr');
+                languageToggle.textContent = 'English';
+                
+                arTexts.forEach(el => el.classList.remove('hidden'));
+                enTexts.forEach(el => el.classList.add('hidden'));
+            }
+        });
+        
+        // Scroll animation
+        const sections = document.querySelectorAll('section');
+        
+        function checkVisibility() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        
+        // Initial check
+        checkVisibility();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkVisibility);
+    </script>
+</body>
+</html>
